@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  Login Activity  -->
+    <string name="login">Ingresar</string>
+    <string name="login_label">Inicia sesión</string>
+    <string name="register">Registrate</string>
+    <string name="email">Email</string>
+    <string name="go_back">Volver</string>
+
+<!--  Boarding fragment  -->
+    <string name="boarding_txt_1">Ingresar tus paquetes nunca ha sido tan sencillo.</string>
+
+<!--    Register fragment-->
+    <string name="register_btn">Registrarse</string>
+    <string name="first_name">Nombre</string>
+    <string name="first_name_hint">Ingresa tu nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="last_name_hint">Ingresa tu apellido</string>
+    <string name="password">Contraseña</string>
+    <string name="password_hint">Ingresa tu contraseña</string>
+    <string name="password_confirmation">Confirmar contraseña</string>
+    <string name="password_confirmation_hint">Confirmar contraseña</string>
+    <string name="email_hint">Ingresa tu email</string>
+
+
+</resources>
