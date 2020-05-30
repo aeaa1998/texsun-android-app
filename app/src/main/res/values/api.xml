@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="client_id">123</string>
-    <string name="client_secret">secret</string>
+    <string name="grant_type">password</string>
+    <string name="client_id">2</string>
+    <string name="client_secret">hV0nT5qvhA2BXyB22pE7BYoMYHh5yukjGagBEipf</string>
 </resources>

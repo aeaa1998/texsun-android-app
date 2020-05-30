@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 
 import com.partners.texsun.R
-import com.partners.texsun.app.BoardingFragmentDirections
 import kotlinx.android.synthetic.main.activity_boarding.*
 import kotlinx.android.synthetic.main.fragment_boarding.view.*
 

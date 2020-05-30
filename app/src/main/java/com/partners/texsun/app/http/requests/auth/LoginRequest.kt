@@ -16,8 +16,13 @@ class LoginRequest {
     @SerializedName("grant_type")
     var grantType = ""
 
+
     @Expose
-    @SerializedName("email")
+    @SerializedName("scope")
+    var scope = ""
+
+    @Expose
+    @SerializedName("username")
     var email = ""
 
     @Expose

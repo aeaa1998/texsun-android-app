@@ -6,6 +6,10 @@
     <string name="register">Registrate</string>
     <string name="email">Email</string>
     <string name="go_back">Volver</string>
+    <string name="invalid_credentials">Credenciales inválidas</string>
+    <string name="login_in">Iniciando sesión</string>
+    <string name="empty_fields">Por favor llene todos los campos</string>
+    <string name="error_could_not_login">No se pudo ingresar, por favor intente más tarde.</string>
 
 <!--  Boarding fragment  -->
     <string name="boarding_txt_1">Ingresar tus paquetes nunca ha sido tan sencillo.</string>
@@ -22,5 +26,8 @@
     <string name="password_confirmation_hint">Confirmar contraseña</string>
     <string name="email_hint">Ingresa tu email</string>
 
+
+<!--  Verification Fragment  -->
+    <string name="registration_label">Se ha creado tu cuenta. Espera meintras se válida tu cuenta en Texun Dashboard. Ya pronto podras utilizar Texun App.</string>
 
 </resources>

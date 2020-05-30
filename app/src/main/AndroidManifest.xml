@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.partners.texsun">
+    package="com.partners.texsun" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".app.TexsunApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".app.app.TexumActivity" >
+        </activity>
         <activity
-            android:windowSoftInputMode="adjustPan"
-            android:name=".app.boarding.BoardingActivity" />
+            android:name=".app.boarding.BoardingActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".app.boarding.LoginFragment" />
-        <activity android:name=".app.SplashScreen">
+        <activity android:name=".app.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

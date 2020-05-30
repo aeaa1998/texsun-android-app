@@ -5,7 +5,7 @@ import com.partners.texsun.app.utils.TexsunLifeCycleCallback
 import io.paperdb.Paper
 
 class TexsunApp : Application() {
-    val activityLifecycleCallback = TexsunLifeCycleCallback()
+    private val activityLifecycleCallback = TexsunLifeCycleCallback()
     companion object {
         var instance = TexsunApp()
 

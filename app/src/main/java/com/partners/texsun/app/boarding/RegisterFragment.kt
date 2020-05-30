@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 
 import com.partners.texsun.R
-import com.partners.texsun.app.BoardingFragmentDirections
 import com.partners.texsun.app.http.HttpClient
 import com.partners.texsun.app.http.HttpClient.handleResponse
 import com.partners.texsun.app.http.requests.auth.LoginRequest

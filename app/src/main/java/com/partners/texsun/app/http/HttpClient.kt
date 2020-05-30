@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import com.partners.texsun.app.http.apis.AuthApi
 import com.partners.texsun.app.http.interceptors.NoConnectionInterceptor
 import com.partners.texsun.app.http.interceptors.TokenInterceptor
+import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -34,14 +35,14 @@ object HttpClient {
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create(timeStampJson))
             .addConverterFactory(GsonConverterFactory.create(timeJson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .client(okHttpClient.build())
             .build()
     }
 
     fun getAuthApi(): AuthApi {
         return getRetrofit(
-            "https://ab959e3f.ngrok.io",
+            "https://5dcaace1.ngrok.io/api/",
             withAuth = false
         ).create(AuthApi::class.java)
     }
@@ -50,7 +51,8 @@ object HttpClient {
     fun <T> handleResponse(
         request: Observable<T>,
         onSuccess: ((T) -> Unit) = {  _ -> },
-        onError: ((Any) -> Unit) = { _ -> }
+        onError: ((Any) -> Unit) = { _ -> },
+        finally: (() -> Unit) = {  }
     ) {
         request.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -60,6 +62,8 @@ object HttpClient {
                 },
                 {
                     onError(it)
+                }, {
+                    finally()
                 })
     }
 

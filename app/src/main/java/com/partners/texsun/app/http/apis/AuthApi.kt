@@ -15,6 +15,6 @@ interface AuthApi {
     @POST("register")
     fun register(@Body registerRequest: RegisterRequest): Observable<MessageResponse>
 
-    @POST("login")
+    @POST("oauth/login")
     fun login(@Body loginRequest: LoginRequest): Observable<LoginResponse>
 }
