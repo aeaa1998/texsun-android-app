@@ -16,16 +16,17 @@
         </activity>
         <activity
             android:name=".app.boarding.BoardingActivity"
+            android:configChanges="uiMode"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".app.boarding.LoginFragment" />
-        <activity android:name=".app.SplashScreen" >
+
+        <activity android:name=".app.SplashScreen" android:configChanges="uiMode" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="texsun.MainActivity" />
+        <activity android:name="texsun.MainActivity" android:configChanges="uiMode" />
     </application>
 
 </manifest>

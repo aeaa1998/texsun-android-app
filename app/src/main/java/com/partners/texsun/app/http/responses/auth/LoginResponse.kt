@@ -9,11 +9,12 @@ class LoginResponse {
     @SerializedName("refresh_token")
     var refreshToken = ""
 
-    @SerializedName("verified_at")
-    var verifiedAt = ""
 
-//    @SerializedName("user")
-//    var user = UserResponse()
-//
+    val verifiedAt: String?
+    get() = user.verifiedAt
+
+    @SerializedName("user")
+    var user = UserResponse()
+
 //
 }

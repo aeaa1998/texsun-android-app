@@ -16,7 +16,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object HttpClient {
-    private fun getRetrofit(baseUrl: String, withAuth: Boolean = false): Retrofit {
+    const val baseUrl = "https://6518bda7bc1d.ngrok.io/api/"
+    fun getRetrofit(baseUrl: String, withAuth: Boolean = false): Retrofit {
         val okHttpClient = OkHttpClient.Builder()
             //10 seconds is the default value
             .connectTimeout(15, TimeUnit.SECONDS)
@@ -42,11 +43,17 @@ object HttpClient {
 
     fun getAuthApi(): AuthApi {
         return getRetrofit(
-            "https://5dcaace1.ngrok.io/api/",
+            baseUrl,
             withAuth = false
         ).create(AuthApi::class.java)
     }
 
+    inline fun <reified T>getApi(): T {
+        return getRetrofit(
+            baseUrl,
+            withAuth = true
+        ).create(T::class.java)
+    }
 
     fun <T> handleResponse(
         request: Observable<T>,

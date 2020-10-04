@@ -12,15 +12,18 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_pendingVerificationFragment"
-            app:destination="@id/pendingVerificationFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:destination="@id/pendingVerificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/pendingVerificationFragment"
+
         android:name="com.partners.texsun.app.boarding.PendingVerificationFragment"
         android:label="fragment_pending_verification"
         tools:layout="@layout/fragment_pending_verification" />
+    <fragment
+        android:id="@+id/configurationMenuFragment"
+
+        android:name="com.partners.texsun.app.app.configuration.ConfigurationMenuFragment"
+        android:label="fragment_configuration_menu"
+        tools:layout="@layout/fragment_configuration_menu" />
 </navigation>

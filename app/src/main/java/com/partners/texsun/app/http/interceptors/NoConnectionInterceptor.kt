@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.partners.texsun.R
 import com.partners.texsun.app.TexsunApp
 import com.partners.texsun.app.http.exceptions.NoConnectivityException
+import com.partners.texsun.app.utils.AuthUtils
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import okhttp3.Interceptor
@@ -21,9 +22,17 @@ import java.net.SocketTimeoutException
 class NoConnectionInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         if (!isConnected()) throw NoConnectivityException()
-
+        val request = chain.request()
+        val requestWithToken = request.newBuilder()
+            .headers(request.headers())
+            .addHeader(
+                "Accept",
+                "application/json"
+            )
+            .method(request.method(), request.body())
+            .build()
         val builder = chain.request().newBuilder()
-        return chain.proceed(builder.build())
+        return chain.proceed(requestWithToken)
     }
 
     private fun isConnected(): Boolean {
