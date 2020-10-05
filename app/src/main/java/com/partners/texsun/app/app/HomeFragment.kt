@@ -40,10 +40,10 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.app_bar_home, container, false)
-        val layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        val mainView = View.inflate(context, R.layout.fragment_home, null)
-        view.mainContentApp.addView(mainView, 0, layoutParams)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+//        val layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+//        val mainView = View.inflate(context, R.layout.fragment_home, null)
+//        view.mainContentApp.addView(mainView, 0, layoutParams)
         return view
     }
 
@@ -63,11 +63,7 @@ class HomeFragment : Fragment() {
     }
 
     private  fun setUpView(){
-        (activity as AppCompatActivity)?.let {
-                appCompatActivity ->
-            appCompatActivity.setSupportActionBar(appToolBar)
-//            appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        }
+
 
         rvHomeMenu.run {
             layoutManager = GridLayoutManager(requireContext(), 2)

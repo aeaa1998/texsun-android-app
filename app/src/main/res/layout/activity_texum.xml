@@ -16,12 +16,20 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomBarView"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/app_navigation" />
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/contentViewPager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottomBarView"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomBarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_secondary"
+        android:background="?android:attr/windowBackground"
+        app:itemTextColor="@android:color/black"
+        app:itemIconTint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/main_bottom_tab_menu"
         tools:layout_editor_absoluteX="0dp" />

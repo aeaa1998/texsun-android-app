@@ -9,13 +9,17 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.partners.texsun.R
 import kotlinx.android.synthetic.main.activity_texum.*
+import kotlinx.android.synthetic.main.app_bar_home.*
 
 class TexumActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_texum)
+        setContentView(R.layout.app_bar_home)
         NavigationUI.setupWithNavController(bottomBarView,mainAppNavHost.findNavController())
+//        setSupportActionBar(appToolBar)
+//            appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
     }
 
 
